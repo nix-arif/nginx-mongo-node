@@ -4,14 +4,14 @@ services:
   nodejs-app:
     build:
       context: ./nodedocker_app
-      container_name: nodejsserver
-      hostname: nodejsserver
-      ports:
-        - "3000:3000"
-      networks:
-        - example-net
-      depends_on:
-        - mongo
+    container_name: nodejsserver
+    hostname: nodejsserver
+    ports:
+      - "3000:3000"
+    networks:
+      - example-net
+    depends_on:
+      - mongo
 
   mongo:
     container_name: mongo
